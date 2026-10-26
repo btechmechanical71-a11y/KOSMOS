@@ -1,0 +1,8 @@
+{
+  "name": "KOSMOS",
+  "description": "We are proposing an autonomous, multi-product manufacturing facility in low Earth orbit — one designed around physics that already works in space, honest about what remains unproven, and built to run with almost nothing sent up from the ground",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Explicit KOSMOS Design System Tokens */
+  --color-kosmos-bg: #080F1E;
+  --color-kosmos-panel: #111C30;
+  --color-kosmos-panel-elevated: #16243D;
+  --color-kosmos-panel-surface: #0C1628;
+  --color-kosmos-cyan: #00D9FF;
+  --color-kosmos-blue: #3973FF;
+  --color-kosmos-text: #F8FAFC;
+  --color-kosmos-silver: #A7B4C8;
+  --color-kosmos-border: #26364D;
+  --color-kosmos-border-subtle: #1C2B3F;
+
+  /* Cohesive Slate Palette Mapping to Midnight Navy & Silver tokens */
+  --color-slate-950: #080F1E;
+  --color-slate-900: #111C30;
+  --color-slate-850: #16243D;
+  --color-slate-800: #1B2940;
+  --color-slate-700: #26364D;
+  --color-slate-600: #384C66;
+  --color-slate-500: #687E9C;
+  --color-slate-400: #A7B4C8;
+  --color-slate-300: #CBD5E1;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F8FAFC;
+  --color-slate-50: #FFFFFF;
+}
+
+@layer base {
+  html {
+    background-color: #080F1E;
+    color: #F8FAFC;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: #080F1E;
+    color: #F8FAFC;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+
+  p, span, div, button, input {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Accessible focus visible rings */
+  :focus-visible {
+    outline: 2px solid #00D9FF;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom technical scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080F1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26364D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3973FF;
+}
+
+/* Custom scrollbar utility */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #0C1628;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #26364D;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #00D9FF;
+}
